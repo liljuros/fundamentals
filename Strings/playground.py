@@ -1,1 +1,2 @@
-print("\N{snake}")
+#print("\N{snake}")
+print(hex(ord('A')))
