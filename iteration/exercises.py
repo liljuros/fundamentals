@@ -56,3 +56,4 @@ for el in data:
     first = False
 
 print(data)
+print(globals())
