@@ -34,5 +34,15 @@
 # high_sales = [key for key, value in sale.items() if value >= 5]
 # print(high_sales)
 
-account = [[i + j for j in range(10)] for i in range(50) if i>10]
-print(account)
+# account = [[i + j for j in range(10)] for i in range(50) if i>10]
+# print(account)
+
+widgets = ['widget 1', 'widget 2', 'widget 3', 'widget 4']
+sales = [10,5,15,0]
+
+d = {
+    widgets[i]: sales[i]
+    for i in range(len(widgets))
+    if sales[i] > 0
+}
+print(d)
