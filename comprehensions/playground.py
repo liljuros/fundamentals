@@ -37,12 +37,31 @@
 # account = [[i + j for j in range(10)] for i in range(50) if i>10]
 # print(account)
 
-widgets = ['widget 1', 'widget 2', 'widget 3', 'widget 4']
-sales = [10,5,15,0]
+# widgets = ['widget 1', 'widget 2', 'widget 3', 'widget 4']
+# sales = [10,5,15,0]
+#
+# d = {
+#     widgets[i]: sales[i]
+#     for i in range(len(widgets))
+#     if sales[i] > 0
+# }
+# print(d)
 
-d = {
-    widgets[i]: sales[i]
-    for i in range(len(widgets))
-    if sales[i] > 0
-}
-print(d)
+# widget_sales = [
+#     {'name': 'widget 1', 'sales': 10},
+#     {'name': 'widget 2', 'sales': 5},
+#     {'name': 'widget 3', 'sales': 0}
+# ]
+
+#sales_by_widget = {}
+# for d in widget_sales:
+#     widget_name = d["name"]
+#     sale = d['sales']
+#     sales_by_widget[widget_name] = sale
+
+# for d in widget_sales:
+#      sales_by_widget[d['name']] = d['sales']
+
+# sales_by_widget={d['name']:d['sales'] for d in widget_sales if d['sales']>0}
+# print(sales_by_widget)
+
