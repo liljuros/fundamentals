@@ -13,3 +13,9 @@
 # if len(name) < 5:
 #     raise ex
 
+# try:
+#     1/0
+# except ZeroDivisionError as ex:
+#     print(f'Exception occured: {type(ex)}, {ex}')
+#
+# print("code continuse running here...")
