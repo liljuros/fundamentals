@@ -18,10 +18,21 @@
 # print(unique_elements_count("hello"))
 import re
 
+
 def arg_func(a="", sep=" ,."):
     pattern = f"[{re.escape(sep)}]"
-    output = re.split(pattern, a)
-    output = set(output)
-    return output
+    words = re.split(pattern, a)
 
-print(arg_func("this is a test.with.some.words test"))
+    word_count = {}
+    for word in words:
+        if word:  # Ignorera tomma strängar
+            if word in word_count:
+                word_count[word] += 1
+            else:
+                word_count[word] = 1
+
+    return word_count
+
+
+print(arg_func(
+    "This is the first sentence. This is the second sentence. This is not the fourth sentence, it is the third sentence."))
