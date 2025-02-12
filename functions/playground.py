@@ -63,3 +63,52 @@
 #         print(f"key: {key}, value {item}")
 #
 # test_func(1,3,5,6,7, f=35, g=45)
+
+# print(round(123456, -2))
+# t = (1,3,5,2,8,6)
+# print(sorted(t, reverse=True))
+# data = {
+#     "a": 1,
+#     "b": 2,
+#     "c": 3,
+#     "d": 4
+#
+# }
+# items = {item*2:value for (item, value) in data.items()}
+# print(items)
+# from pprint import pprint
+# l1 = 'xyzh'
+# l2 = [1,2,3,4,5,6]
+# data = [(a, b) for a in l1 for b in l2]
+# pprint(data)
+
+# s = '3.14/4.15/6.7/8.9'
+# print(float(s).split('/')[1])
+# import math
+#
+# def quadratic_solution(a, b, c):
+#     # Calculate one solution of the quadratic equation
+#     solution = (-b + math.sqrt(b**2 - 4*a*c)) / (2*a)
+#     return round(solution, 2)
+#
+# print(quadratic_solution(1, -5, 8))
+# import math
+#
+# def quadratic_solutions(a, b, c):
+#     discriminant = b**2 - 4*a*c
+#     if discriminant < 0:
+#         return "No real solution"
+#     else:
+#         sol1 = (-b + math.sqrt(discriminant)) / (2*a)
+#         sol2 = (-b - math.sqrt(discriminant)) / (2*a)
+#         return round(sol1, 2), round(sol2, 2)
+#
+# print(quadratic_solutions(1, -5, -8))
+
+def encrypt(s):
+    return ''.join(chr(ord(c) + 10) for c in s)
+
+def decrypt(s):
+    return ''.join(chr(ord(c) - 10) for c in s)
+
+print(decrypt('S}kkm*Xo\x81~yx'))
