@@ -10,4 +10,4 @@ def apply(func, *args):
     result = func(*args)
     return result
 
-print(apply(add, 2, 3))
+print(apply(greet, "Erik"))
