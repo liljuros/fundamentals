@@ -1,13 +1,31 @@
-def add(a,b):
-    return a + b
+# def add(a,b):
+#     return a + b
+#
+# def greet(name):
+#     return f'Hello, {name}!'
+#
+# #print(add(2,3), greet("John"))
+#
+# def apply(func, *args):
+#     result = func(*args)
+#     return result
+#
+# print(apply(greet, "Erik"))
 
-def greet(name):
-    return f'Hello, {name}!'
+# data = ['a', 'ab', 'abc', 'abcd']
+# # lengths = [len(element) for element in data]
+# lengths = map(len, data)
+# print(list(lengths))
 
-#print(add(2,3), greet("John"))
+def outer(a, b):
+    sum_ = a + b
 
-def apply(func, *args):
-    result = func(*args)
-    return result
+    def inner():
+        prod = a *b
+        print(a, b, sum_, prod)
+        return "you just called a closure!"
 
-print(apply(greet, "Erik"))
+    return inner()
+
+func = outer(2,3)
+print(func)
