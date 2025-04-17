@@ -1,7 +1,9 @@
-import time
-from time import gmtime
+# import time
+# from time import gmtime
+#
+# #print(gmtime(time.time()))
+# current = gmtime(time.time())
+# print(current[0])
+import datetime
 
-#print(gmtime(time.time()))
-current = gmtime(time.time())
-print(current[0])
-
+print(datetime.datetime.now())
