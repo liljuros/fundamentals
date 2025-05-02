@@ -1,3 +1,4 @@
+import csv
 # with open('actors.csv') as f:
 #     for row in f:
 #         print(row)
@@ -8,7 +9,7 @@
 #         fields = row.split(',')
 #         print(fields)
 
-# import csv
+
 #
 # with open('actors.csv') as f:
 #     reader = csv.reader(f,delimiter=',', quotechar='"')
@@ -37,18 +38,22 @@ census = 'st-2001est-01.csv'
 #     return result
 #
 # print(parse_nasdaq(nasdaq))
-def parse_census_data(file_name):
-    results = []
-    with open(file_name) as f:
-        reader = csv.reader(f)
+# def parse_census_data(file_name):
+#     results = []
+#     with open(file_name) as f:
+#         reader = csv.reader(f)
+#
+#         headers = next(reader)
+#         results.append(headers)
+#         for row in reader:
+#             area = row[0]
+#             data = row[1:]
+#             data = [area] + [int(field.replace(',', ''))for field in data]
+#             results.append(data)
+#     return results
+#
+# print(parse_census_data(census))
 
-        headers = next(reader)
-        results.append(headers)
-        for row in reader:
-            area = row[0]
-            data = row[1:]
-            data = [area] + [int(field.replace(',', ''))for field in data]
-            results.append(data)
-    return results
-
-print(parse_census_data(census))
+with open('test.csv') as f:
+    for row in f:
+        print(row, end='')
